@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/hidden.less.svg)](http://badge.fury.io/js/hidden.less)
 [![bower version](https://badge.fury.io/bo/hidden.less.svg)](http://badge.fury.io/bo/hidden.less)
 
-Responsive classname generator for hidding some HTML depending on media breakpoints.
+Responsive classnames generator for hidding some HTML depending on media breakpoints.
 
 ## Installation
 
@@ -20,12 +20,71 @@ Responsive classname generator for hidding some HTML depending on media breakpoi
 
 ## How it works
 
+### `.hidden-from-*`
 
+Hides content from selected breakpoint and on larger screens. Example as rendered in CSS:
+
+```css
+@media (min-width: 576px) {
+  .hidden-from-sm {
+    display: none;
+  }
+}
+```
+
+|                   | **xs**  | **sm**    | **md**    | **lg**     | **xl**   |
+| ----------------- | ------- | --------- | --------- | ---------- | -------- |
+|                   | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
+| `.hidden`         | hidden  | hidden    | hidden    | hidden     | hidden   |
+| `.hidden-from-xs` | hidden  | hidden    | hidden    | hidden     | hidden   |
+| `.hidden-from-sm` |         | hidden    | hidden    | hidden     | hidden   |
+| `.hidden-from-md` |         |           | hidden    | hidden     | hidden   |
+| `.hidden-from-lg` |         |           |           | hidden     | hidden   |
+| `.hidden-from-xl` |         |           |           |            | hidden   |
+
+### `.hidden-upto-*`
+
+Hides content from smaller screens and up to selected breakpoint. Example as rendered in CSS:
+
+```css
+@media (max-width: 767px) {
+  .hidden-upto-md {
+    display: none;
+  }
+}
+```
+
+|                   | **xs**  | **sm**    | **md**    | **lg**     | **xl**   |
+| ----------------- | ------- | --------- | --------- | ---------- | -------- |
+|                   | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
+| `.hidden-upto-sm` | hidden  |           |           |            |          |
+| `.hidden-upto-md` | hidden  | hidden    |           |            |          |
+| `.hidden-upto-lg` | hidden  | hidden    | hidden    |            |          |
+| `.hidden-upto-xl` | hidden  | hidden    | hidden    | hidden     |          |
+
+### `.hidden-between-*-*`
+
+Hides content from one breakpoint to another.
+
+```css
+@media (min-width: 576px) and (max-width: 767px) {
+  .hidden-between-sm-md {
+    display: none;
+  }
+}
+```
+
+|                         | **xs**  | **sm**    | **md**    | **lg**     | **xl**   |
+| ----------------------- | ------- | --------- | --------- | ---------- | -------- |
+|                         | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
+| `.hidden-between-xs-sm` | hidden  |           |           |            |          |
+| `.hidden-between-sm-md` |         | hidden    |           |            |          |
+| `.hidden-between-md-lg` |         |           | hidden    |            |          |
+| `.hidden-between-lg-xl` |         |           |           | hidden     |          |
 
 ## Usage in HTML
 
-Link compiled `hidden.css` in the head of your page.
-Apply classes to any HTML element to make them `display:none`.
+Link compiled `hidden.css` and apply classes to any HTML element to make them `display:none`.
 
 ## Usage in LESS
 
@@ -80,4 +139,4 @@ To change any (or every) parameter add setting mixin after import inside your .l
 }
 ```
 
-In that example was redefined breakpoints suffix names.
+In that example was redefined breakpoints and suffix names.
