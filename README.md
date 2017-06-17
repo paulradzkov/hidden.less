@@ -82,6 +82,18 @@ Hides content from one breakpoint to another.
 | `.hidden-between-md-lg` |         |           | hidden    |            |          |
 | `.hidden-between-lg-xl` |         |           |           | hidden     |          |
 
+### `.hidden-print`
+
+For hidding something on print. Doesn't have any breakpoints.
+
+```css
+@media print {
+  .hidden-print {
+    display: none;
+  }
+}
+```
+
 ## Usage in HTML
 
 Link compiled `hidden.css` and apply classes to any HTML element to make them `display:none`.
