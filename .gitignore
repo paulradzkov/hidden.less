@@ -47,6 +47,8 @@ typings/
 
 # Optional REPL history
 .node_repl_history
+.ftppass
+.DS_Store
 
 # Output of 'npm pack'
 *.tgz
@@ -56,4 +58,3 @@ typings/
 
 # dotenv environment variables file
 .env
-

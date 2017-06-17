@@ -1,0 +1,42 @@
+{
+  "name": "hidden.less",
+  "homepage": "https://github.com/paulradzkov/hidden.less",
+  "description": "Responsive classname generator for hidding some HTML depending on media breakpoints",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulradzkov/hidden.less.git"
+  },
+  "keywords": [
+      "responsive",
+      "utility",
+      "less",
+      "hidden",
+      "media",
+      "breakpoint"
+    ],
+  "authors": [
+    "Paul Radzkov <radzkov@gmail.com> (http://paulradzkov.com)"
+  ],
+  "license": "MIT",
+  "main": [
+    "hidden.less"
+  ],
+  "ignore": [
+    "**/.*",
+    "src",
+    "out",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "component.json",
+    "package.json",
+    "docpad.coffee",
+    "Gruntfile.coffee",
+    "contributing.json"
+  ],
+  "dependencies": {
+  }
+}

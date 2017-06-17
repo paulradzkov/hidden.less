@@ -1,0 +1,79 @@
+/*! hidden.less v0.0.1 | MIT License | github.com/paulradzkov/hidden.less */
+
+.hidden-settings() {
+    // media breakpoints
+    @breakpoints:
+        576px,
+        768px,
+        992px,
+        1200px;
+
+    // names for breakpoint suffixes
+    @suffixes: xs, sm, md, lg, xl;
+
+    // IMPORTANT: suffixes count should be bigger than breakpoints count by 1
+    // suffixes-count = breakpoints-count + 1
+}
+
+@hidden-render: {
+
+    .hidden-settings();
+
+    @n: length(@breakpoints); // how many breakpoints we have
+    @m: length(@suffixes);    // how many suffixes we have
+    @first-suffix: extract(@suffixes, 1); // first breakpoint suffix
+
+    // Create breakpoints
+    .responsive(@index: @m) when (@index > 1) and (@m = (@n + 1)) {
+        .responsive((@index - 1)); // next iteration
+        @current-class: extract(@suffixes, @index);
+        @current-breakpoint: extract(@breakpoints, (@index - 1));
+        @prev-class: extract(@suffixes, @index - 1);
+        @prev-breakpoint: extract(@breakpoints, (@index - 2));
+
+        // render between
+        & when (@index > 2) {
+            @media (min-width: @prev-breakpoint) and (max-width: (@current-breakpoint - 1px)) {
+                .hidden-between-@{prev-class}-@{current-class} {
+                    && {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        // render upto
+        @media (max-width: (@current-breakpoint - 1px)) {
+            .hidden-upto-@{current-class} {
+                display: none;
+            }
+
+            .hidden-between-@{prev-class}-@{current-class} when (@index = 2) {
+                && {
+                    display: none;
+                }
+            }
+        }
+
+        // render from
+        @media (min-width: @current-breakpoint) {
+            .hidden-from-@{current-class} {
+                display: none;
+            }
+        }
+    }
+
+    .hidden { display: none; }
+    .hidden-from-@{first-suffix} {display: none;}
+
+    // Render mediaqueries with breakpoints
+    .responsive();
+
+    @media print {
+        .hidden-print {
+            display: none;
+        }
+    }
+};
+
+@hidden-render();
