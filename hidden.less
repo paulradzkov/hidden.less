@@ -35,9 +35,7 @@
         & when (@index > 2) {
             @media (min-width: @prev-breakpoint) and (max-width: (@current-breakpoint - 1px)) {
                 .hidden-between-@{prev-class}-@{current-class} {
-                    && {
-                        display: none;
-                    }
+                    display: none;
                 }
             }
         }
@@ -49,9 +47,7 @@
             }
 
             .hidden-between-@{prev-class}-@{current-class} when (@index = 2) {
-                && {
-                    display: none;
-                }
+                display: none;
             }
         }
 
