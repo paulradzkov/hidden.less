@@ -1,0 +1,10 @@
+title: hidden.less
+author: Paul Radzkov
+email: radzkov@gmail.com
+description: > # this means to ignore newlines
+  Responsive classnames generator for hidding some HTML depending on media breakpoints.
+# twitter_username: paul_radzkov
+github_username: paulradzkov
+google_analytics: UA-29416794-1
+remote_theme: paulradzkov/docs-template
+github_link: https://github.com/paulradzkov/hidden.less
