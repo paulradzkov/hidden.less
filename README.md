@@ -8,9 +8,9 @@ Responsive classnames generator for hidding some HTML depending on media breakpo
 ## Installation
 
 **Compiled from CDN**
-[`https://unpkg.com/hidden.less@0.0.1/hidden.css`](https://unpkg.com/hidden.less@0.0.1/hidden.css)
-[`https://unpkg.com/hidden.less@0.0.1/hidden.min.css`](https://unpkg.com/hidden.less@0.0.1/hidden.min.css)
-[`https://unpkg.com/hidden.less@0.0.1/hidden.min.css.map`](https://unpkg.com/hidden.less@0.0.1/hidden.min.css.map)
+[`https://unpkg.com/hidden.less@0.0.2/hidden.css`](https://unpkg.com/hidden.less@0.0.2/hidden.css)
+[`https://unpkg.com/hidden.less@0.0.2/hidden.min.css`](https://unpkg.com/hidden.less@0.0.2/hidden.min.css)
+[`https://unpkg.com/hidden.less@0.0.2/hidden.min.css.map`](https://unpkg.com/hidden.less@0.0.2/hidden.min.css.map)
 
 **NPM**
 `npm install hidden.less --save-dev`
