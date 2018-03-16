@@ -1,70 +1,70 @@
-/*! hidden.less v0.0.1 | MIT License | github.com/paulradzkov/hidden.less */
+/*! hidden.less v0.0.2 | MIT License | github.com/paulradzkov/hidden.less */
 .hidden {
   display: none;
 }
-.hidden-from-xs {
+.hidden\:from-xs {
   display: none;
 }
 @media (max-width: 575px) {
-  .hidden-upto-sm {
+  .hidden\:upto-sm {
     display: none;
   }
-  .hidden-between-xs-sm {
+  .hidden\:between-xs-sm {
     display: none;
   }
 }
 @media (min-width: 576px) {
-  .hidden-from-sm {
+  .hidden\:from-sm {
     display: none;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .hidden-between-sm-md {
+  .hidden\:between-sm-md {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .hidden-upto-md {
+  .hidden\:upto-md {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .hidden-from-md {
+  .hidden\:from-md {
     display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .hidden-between-md-lg {
+  .hidden\:between-md-lg {
     display: none;
   }
 }
 @media (max-width: 991px) {
-  .hidden-upto-lg {
+  .hidden\:upto-lg {
     display: none;
   }
 }
 @media (min-width: 992px) {
-  .hidden-from-lg {
+  .hidden\:from-lg {
     display: none;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .hidden-between-lg-xl {
+  .hidden\:between-lg-xl {
     display: none;
   }
 }
 @media (max-width: 1199px) {
-  .hidden-upto-xl {
+  .hidden\:upto-xl {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  .hidden-from-xl {
+  .hidden\:from-xl {
     display: none;
   }
 }
 @media print {
-  .hidden-print {
+  .hidden\:print {
     display: none;
   }
 }

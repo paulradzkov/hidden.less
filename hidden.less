@@ -1,4 +1,4 @@
-/*! hidden.less v0.0.1 | MIT License | github.com/paulradzkov/hidden.less */
+/*! hidden.less v0.0.2 | MIT License | github.com/paulradzkov/hidden.less */
 
 .hidden-settings() {
     // media breakpoints
@@ -34,7 +34,7 @@
         // render between
         & when (@index > 2) {
             @media (min-width: @prev-breakpoint) and (max-width: (@current-breakpoint - 1px)) {
-                .hidden-between-@{prev-class}-@{current-class} {
+                .hidden\:between-@{prev-class}-@{current-class} {
                     display: none;
                 }
             }
@@ -42,31 +42,31 @@
 
         // render upto
         @media (max-width: (@current-breakpoint - 1px)) {
-            .hidden-upto-@{current-class} {
+            .hidden\:upto-@{current-class} {
                 display: none;
             }
 
-            .hidden-between-@{prev-class}-@{current-class} when (@index = 2) {
+            .hidden\:between-@{prev-class}-@{current-class} when (@index = 2) {
                 display: none;
             }
         }
 
         // render from
         @media (min-width: @current-breakpoint) {
-            .hidden-from-@{current-class} {
+            .hidden\:from-@{current-class} {
                 display: none;
             }
         }
     }
 
     .hidden { display: none; }
-    .hidden-from-@{first-suffix} {display: none;}
+    .hidden\:from-@{first-suffix} {display: none;}
 
     // Render mediaqueries with breakpoints
     .responsive();
 
     @media print {
-        .hidden-print {
+        .hidden\:print {
             display: none;
         }
     }

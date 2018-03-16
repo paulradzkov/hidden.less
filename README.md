@@ -7,15 +7,15 @@ Responsive classnames generator for hidding some HTML depending on media breakpo
 
 ## Installation
 
-**Compiled from CDN**  
-[`https://unpkg.com/hidden.less@0.0.1/hidden.css`](https://unpkg.com/hidden.less@0.0.1/hidden.css)  
-[`https://unpkg.com/hidden.less@0.0.1/hidden.min.css`](https://unpkg.com/hidden.less@0.0.1/hidden.min.css)  
+**Compiled from CDN**
+[`https://unpkg.com/hidden.less@0.0.1/hidden.css`](https://unpkg.com/hidden.less@0.0.1/hidden.css)
+[`https://unpkg.com/hidden.less@0.0.1/hidden.min.css`](https://unpkg.com/hidden.less@0.0.1/hidden.min.css)
 [`https://unpkg.com/hidden.less@0.0.1/hidden.min.css.map`](https://unpkg.com/hidden.less@0.0.1/hidden.min.css.map)
 
-**NPM**  
+**NPM**
 `npm install hidden.less --save-dev`
 
-**Bower**  
+**Bower**
 `bower install hidden.less --save`
 
 ## How it works
@@ -26,7 +26,7 @@ Hides content from selected breakpoint and on larger screens. Example as rendere
 
 ```css
 @media (min-width: 576px) {
-  .hidden-from-sm {
+  .hidden:from-sm {
     display: none;
   }
 }
@@ -36,11 +36,11 @@ Hides content from selected breakpoint and on larger screens. Example as rendere
 | ----------------- | ------- | --------- | --------- | ---------- | -------- |
 |                   | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
 | `.hidden`         | hidden  | hidden    | hidden    | hidden     | hidden   |
-| `.hidden-from-xs` | hidden  | hidden    | hidden    | hidden     | hidden   |
-| `.hidden-from-sm` |         | hidden    | hidden    | hidden     | hidden   |
-| `.hidden-from-md` |         |           | hidden    | hidden     | hidden   |
-| `.hidden-from-lg` |         |           |           | hidden     | hidden   |
-| `.hidden-from-xl` |         |           |           |            | hidden   |
+| `.hidden:from-xs` | hidden  | hidden    | hidden    | hidden     | hidden   |
+| `.hidden:from-sm` |         | hidden    | hidden    | hidden     | hidden   |
+| `.hidden:from-md` |         |           | hidden    | hidden     | hidden   |
+| `.hidden:from-lg` |         |           |           | hidden     | hidden   |
+| `.hidden:from-xl` |         |           |           |            | hidden   |
 
 ### `.hidden-upto-*`
 
@@ -48,7 +48,7 @@ Hides content from smaller screens and up to selected breakpoint. Example as ren
 
 ```css
 @media (max-width: 767px) {
-  .hidden-upto-md {
+  .hidden:upto-md {
     display: none;
   }
 }
@@ -57,10 +57,10 @@ Hides content from smaller screens and up to selected breakpoint. Example as ren
 |                   | **xs**  | **sm**    | **md**    | **lg**     | **xl**   |
 | ----------------- | ------- | --------- | --------- | ---------- | -------- |
 |                   | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
-| `.hidden-upto-sm` | hidden  |           |           |            |          |
-| `.hidden-upto-md` | hidden  | hidden    |           |            |          |
-| `.hidden-upto-lg` | hidden  | hidden    | hidden    |            |          |
-| `.hidden-upto-xl` | hidden  | hidden    | hidden    | hidden     |          |
+| `.hidden:upto-sm` | hidden  |           |           |            |          |
+| `.hidden:upto-md` | hidden  | hidden    |           |            |          |
+| `.hidden:upto-lg` | hidden  | hidden    | hidden    |            |          |
+| `.hidden:upto-xl` | hidden  | hidden    | hidden    | hidden     |          |
 
 ### `.hidden-between-*-*`
 
@@ -68,7 +68,7 @@ Hides content from one breakpoint to another.
 
 ```css
 @media (min-width: 576px) and (max-width: 767px) {
-  .hidden-between-sm-md {
+  .hidden:between-sm-md {
     display: none;
   }
 }
@@ -77,18 +77,18 @@ Hides content from one breakpoint to another.
 |                         | **xs**  | **sm**    | **md**    | **lg**     | **xl**   |
 | ----------------------- | ------- | --------- | --------- | ---------- | -------- |
 |                         | 0—575px | 576—767px | 768—991px | 992—1199px | 1200—∞px |
-| `.hidden-between-xs-sm` | hidden  |           |           |            |          |
-| `.hidden-between-sm-md` |         | hidden    |           |            |          |
-| `.hidden-between-md-lg` |         |           | hidden    |            |          |
-| `.hidden-between-lg-xl` |         |           |           | hidden     |          |
+| `.hidden:between-xs-sm` | hidden  |           |           |            |          |
+| `.hidden:between-sm-md` |         | hidden    |           |            |          |
+| `.hidden:between-md-lg` |         |           | hidden    |            |          |
+| `.hidden:between-lg-xl` |         |           |           | hidden     |          |
 
-### `.hidden-print`
+### `.hidden:print`
 
 For hidding something on print. Doesn't have any breakpoints.
 
 ```css
 @media print {
-  .hidden-print {
+  .hidden:print {
     display: none;
   }
 }
