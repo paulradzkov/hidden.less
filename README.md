@@ -20,13 +20,13 @@ Responsive classnames generator for hidding some HTML depending on media breakpo
 
 ## How it works
 
-### `.hidden-from-*`
+### `.hidden:from-*`
 
 Hides content from selected breakpoint and on larger screens. Example as rendered in CSS:
 
 ```css
 @media (min-width: 576px) {
-  .hidden:from-sm {
+  .hidden\:from-sm {
     display: none;
   }
 }
@@ -42,13 +42,13 @@ Hides content from selected breakpoint and on larger screens. Example as rendere
 | `.hidden:from-lg` |         |           |           | hidden     | hidden   |
 | `.hidden:from-xl` |         |           |           |            | hidden   |
 
-### `.hidden-upto-*`
+### `.hidden:upto-*`
 
 Hides content from smaller screens and up to selected breakpoint. Example as rendered in CSS:
 
 ```css
 @media (max-width: 767px) {
-  .hidden:upto-md {
+  .hidden\:upto-md {
     display: none;
   }
 }
@@ -62,13 +62,13 @@ Hides content from smaller screens and up to selected breakpoint. Example as ren
 | `.hidden:upto-lg` | hidden  | hidden    | hidden    |            |          |
 | `.hidden:upto-xl` | hidden  | hidden    | hidden    | hidden     |          |
 
-### `.hidden-between-*-*`
+### `.hidden:between-*-*`
 
 Hides content from one breakpoint to another.
 
 ```css
 @media (min-width: 576px) and (max-width: 767px) {
-  .hidden:between-sm-md {
+  .hidden\:between-sm-md {
     display: none;
   }
 }
@@ -88,7 +88,7 @@ For hidding something on print. Doesn't have any breakpoints.
 
 ```css
 @media print {
-  .hidden:print {
+  .hidden\:print {
     display: none;
   }
 }
