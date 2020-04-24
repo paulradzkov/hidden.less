@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/hidden.less.svg)](http://badge.fury.io/js/hidden.less)
 [![bower version](https://badge.fury.io/bo/hidden.less.svg)](http://badge.fury.io/bo/hidden.less)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpaulradzkov%2Fhidden.less.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpaulradzkov%2Fhidden.less?ref=badge_shield)
 
 Responsive classnames generator for hidding some HTML depending on media breakpoints.
 
@@ -152,3 +153,7 @@ To change any (or every) parameter add setting mixin after import inside your .l
 ```
 
 In that example was redefined breakpoints and suffix names.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpaulradzkov%2Fhidden.less.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpaulradzkov%2Fhidden.less?ref=badge_large)
